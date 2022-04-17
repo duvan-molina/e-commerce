@@ -1,12 +1,12 @@
-import Header from "./components/header";
+import Footer from "./components/footer";
 
 const Layout: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => (
-  <div className="container mx-auto  px-4">
+  <div className="mx-auto">
     {/* <Header /> */}
     {children}
-    <div>footer</div>
+    <Footer />
   </div>
 );
 
