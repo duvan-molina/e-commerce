@@ -1,6 +1,9 @@
 module.exports = {
   content: ["./pages/**/*.{js,jsx,ts,tsx}", "./modules/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      dancing: ["Dancing Script", "cursive"],
+    },
     colors: {
       black: "#4b4b4b",
       main: "#f6593e",

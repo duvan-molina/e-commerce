@@ -1,18 +1,55 @@
-const Header: React.FC<{}> = () => (
-  <header className="flex w-full py-4 md:py-10 items-center">
-    <div className="basis-1/2">
-      <h1>Style shop</h1>
-    </div>
-    <div className="basis-1/2">
-      <ul className="flex w-full text-right items-center">
-        <li className="basis-1/2 mx-2 md:mx-10">Categorias</li>
-        <li className="basis-1/2 mx-2 md:mx-10">Ofertas</li>
-        <li className="basis-1/2 mx-2 md:mx-10">Contacto</li>
-        <li className="basis-1/2 mx-2 md:mx-10">Nosotros</li>
-      </ul>
-    </div>
-    <div className="basis-1/2 text-right">item 3 </div>
-  </header>
-);
+import { useState } from "react";
+import Link from "next/link";
+import { Menu } from "@styled-icons/boxicons-regular";
+
+import ContainerComponent from "@shared/components/Container";
+
+const Header: React.FC<{}> = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleClick = () => setIsMenuOpen(!isMenuOpen);
+
+  return (
+    <header className="sticky top-0 z-50 bg-white shadow-lg">
+      <ContainerComponent>
+        <nav className="flex flex-wrap items-center justify-between w-full py-4">
+          <h1 className="text-main font-dancing font-bold text-2xl">
+            <Link href="/">
+              <a>StyleShop</a>
+            </Link>
+          </h1>
+
+          <button
+            onClick={handleClick}
+            className="h-6 w-6 cursor-pointer md:hidden block"
+          >
+            <Menu size={30} color="#4b4b4b" />
+          </button>
+
+          <div
+            className={[
+              "w-full md:flex md:items-center md:w-auto",
+              !isMenuOpen ? "hidden" : "",
+            ].join(" ")}
+          >
+            <ul
+              className="
+              pt-4
+              text-center
+              md:flex
+              md:justify-between 
+              md:pt-0"
+            >
+              <li className="md:p-4 py-2">Categorias</li>
+              <li className="md:p-4 py-2">Ofertas</li>
+              <li className="md:p-4 py-2">Contacto</li>
+              <li className="md:p-4 py-2">Nosotros</li>
+            </ul>
+          </div>
+        </nav>
+      </ContainerComponent>
+    </header>
+  );
+};
 
 export default Header;
