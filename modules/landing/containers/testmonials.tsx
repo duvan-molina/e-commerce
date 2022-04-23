@@ -4,7 +4,7 @@ import ReactStars from "react-rating-stars-component";
 const TestMonialsContainer: React.FC = () => {
   return (
     <ContainerComponent>
-      <div className="rounded grid  grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 bg-lightMain p-6 sm:p-8 md:p-14 mb-6 md:mb-12 gap-10 ">
+      <div className="rounded grid  grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 bg-lightMain p-6 sm:p-8 md:p-14 gap-10 ">
         <div className="bg-white h-64 min rounded-lg p-4 flex flex-col justify-between">
           <div>
             <ReactStars

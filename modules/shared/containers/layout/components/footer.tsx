@@ -1,6 +1,6 @@
 const footer: React.FC = () => {
   return (
-    <footer className="bg-black h-12">
+    <footer className="bg-black h-12 mt-6 md:mt-12 ">
       <div className="container h-full mx-auto text-white flex justify-center items-center">
         <span className="mr-1">Desarrollado por </span>
         <a

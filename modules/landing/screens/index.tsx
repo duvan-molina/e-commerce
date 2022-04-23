@@ -1,6 +1,6 @@
 import TestMonialsContainer from "../containers/testmonials";
 import ContainerComponent from "@shared/components/Container";
-import Products from "../containers/products";
+import Products from "../../shared/containers/products";
 import CarouselComponent from "@shared/components/Carousel/carousel";
 import Banners from "../containers/banners.container";
 

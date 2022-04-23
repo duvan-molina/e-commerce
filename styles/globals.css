@@ -31,3 +31,8 @@ a {
 .custom-dot-list-style .react-multi-carousel-dot--active button {
   background-color: #f6593e;
 }
+
+.swiper-slide {
+  border-radius: 0.3rem;
+  overflow: hidden;
+}

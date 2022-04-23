@@ -25,7 +25,6 @@ const Header: React.FC<{}> = () => {
           >
             <Menu size={30} color="#4b4b4b" />
           </button>
-
           <div
             className={[
               "w-full md:flex md:items-center md:w-auto",
@@ -40,7 +39,11 @@ const Header: React.FC<{}> = () => {
               md:justify-between 
               md:pt-0"
             >
-              <li className="md:p-4 py-2">Categorias</li>
+              <li className="md:p-4 py-2">
+                <Link href="/productos">
+                  <a>Productos</a>
+                </Link>
+              </li>
               <li className="md:p-4 py-2">Ofertas</li>
               <li className="md:p-4 py-2">Contacto</li>
               <li className="md:p-4 py-2">Nosotros</li>

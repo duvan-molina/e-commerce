@@ -29,6 +29,7 @@ const CarouselComponent: React.FC = () => {
       arrows={false}
       responsive={responsive}
       infinite
+      autoPlay
       className=""
       dotListClass="custom-dot-list-style"
     >
