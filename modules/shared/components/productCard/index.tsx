@@ -3,13 +3,22 @@ import NumberFormat from "react-number-format";
 import Button from "../button";
 
 type Props = {
+  id: string;
   title: string;
   imagen: string;
   price: number;
   slug: string;
+  addProductsCart: (item: { id: string; title: string; price: number }) => void;
 };
 
-const ProductCard: React.FC<Props> = ({ title, imagen, price, slug }) => {
+const ProductCard: React.FC<Props> = ({
+  id,
+  title,
+  imagen,
+  price,
+  slug,
+  addProductsCart,
+}) => {
   return (
     <Link href={`producto/${slug}`}>
       <div className={`text-center group ease-in duration-300`}>
@@ -24,7 +33,7 @@ const ProductCard: React.FC<Props> = ({ title, imagen, price, slug }) => {
               text="Agregar al carrito"
               onClick={(e) => {
                 e.stopPropagation();
-                alert("Hello world");
+                addProductsCart({ id, title, price });
               }}
             />
           </div>

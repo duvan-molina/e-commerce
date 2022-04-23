@@ -3,6 +3,8 @@ import ContainerComponent from "@shared/components/Container";
 import Products from "../../shared/containers/products";
 import CarouselComponent from "@shared/components/Carousel/carousel";
 import Banners from "../containers/banners.container";
+import SubTitleComponent from "@shared/components/Title";
+import { productsList } from "data";
 
 const Landing: React.FC = () => {
   return (
@@ -13,17 +15,13 @@ const Landing: React.FC = () => {
       <ContainerComponent>
         <Banners />
         <div className="mx-auto">
-          <h2 className="mb-6 mt-6 text-center sm:text-left md:mt-12 font-bold text-2xl">
-            Productos destacados
-          </h2>
-          <Products />
+          <SubTitleComponent title="Productos destacados" />
+          <Products products={productsList} />
         </div>
       </ContainerComponent>
       <div className="mx-auto">
         <ContainerComponent>
-          <h2 className="mb-6 mt-6 text-center sm:text-left md:mt-12 font-bold text-2xl">
-            Testimonios
-          </h2>
+          <SubTitleComponent title="Testimonios" />
         </ContainerComponent>
         <TestMonialsContainer />
       </div>

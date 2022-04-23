@@ -1,49 +1,11 @@
 import CarouselWithCustomDots from "@shared/components/CarouselWhitCustomDots";
 import Products from "../../shared/containers/products";
 import NumberFormat from "react-number-format";
+import { productsList } from "data";
 
 const productScreen: React.FC<{
   slug: string;
 }> = ({ slug }) => {
-  const productsList = [
-    {
-      title: "Producto 1",
-      imagen: "https://picsum.photos/200/300",
-      price: 2344,
-      slug: "product-1",
-    },
-    {
-      title: "Producto 2",
-      imagen: "https://picsum.photos/200/600",
-      price: 2324,
-      slug: "product-2",
-    },
-    {
-      title: "Producto 3",
-      imagen: "https://picsum.photos/200/700",
-      price: 2124,
-      slug: "product-3",
-    },
-    {
-      title: "Producto 4",
-      imagen: "https://picsum.photos/200/800",
-      price: 2394,
-      slug: "product-4",
-    },
-    {
-      title: "Producto 5",
-      imagen: "https://picsum.photos/200/800",
-      price: 2394,
-      slug: "product-5",
-    },
-    {
-      title: "Producto 6",
-      imagen: "https://picsum.photos/200/800",
-      price: 2394,
-      slug: "product-6",
-    },
-  ];
-
   return (
     <div className="mb-6 mt-6">
       <div className="flex flex-col border-b md:flex-row">
@@ -86,7 +48,7 @@ const productScreen: React.FC<{
         <h2 className="text-lg text-heading tracking-tight font-semibold mb-6">
           Related Products
         </h2>
-        <Products />
+        <Products products={productsList} />
       </div>
     </div>
   );
