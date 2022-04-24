@@ -46,7 +46,7 @@ const Header: React.FC<{}> = () => {
               </li>
               <li className="md:p-4 py-2">Ofertas</li>
               <li className="md:p-4 py-2">Contacto</li>
-              <li className="md:p-4 py-2">Nosotros</li>
+              <li className="md:p-4">Nosotros</li>
             </ul>
           </div>
         </nav>

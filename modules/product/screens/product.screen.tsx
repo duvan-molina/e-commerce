@@ -8,7 +8,7 @@ const productScreen: React.FC<{
 }> = ({ slug }) => {
   return (
     <div className="mb-6 mt-6">
-      <div className="flex flex-col border-b md:flex-row">
+      <div className="flex flex-col border-b-borderColor border-b-[0.1rem]	 md:flex-row">
         <CarouselWithCustomDots images={productsList.map((e) => e.imagen)} />
         <div className="flex flex-col items-start p-5 pt-10 md:w-1/2 lg:p-14 xl:p-16">
           <div className="w-flull">

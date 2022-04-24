@@ -1,5 +1,7 @@
+import Currency from "currency.js";
 import { DEFAULT_LOCALE } from "./constants";
 import memoize from "@formatjs/fast-memoize";
+import { CartProduct, Product } from "interface";
 
 /**
  * @description Intl formarters to speed up
@@ -63,4 +65,39 @@ export const formatMoney = (
   //const formatter = new Intl.NumberFormat('en-US', options);
   const formatter = formatters.getNumberFormat(DEFAULT_LOCALE, options);
   return formatter.format(value);
+};
+
+export const getProductQuantity = (
+  cartProducts: CartProduct[],
+  index: number
+): number => {
+  let quantity = 0;
+  if (index !== -1) {
+    quantity = cartProducts[index].quantity;
+  }
+  return quantity;
+};
+
+export const findProductIndex = (
+  cartProducts: CartProduct[],
+  dataId: string
+): number => {
+  let index = -1;
+  if (cartProducts && cartProducts.length) {
+    index = cartProducts.findIndex((product) => product.id === dataId);
+  }
+  return index;
+};
+
+export const calculateTotalPrice = (products: Product[]): number => {
+  let total = Currency(0);
+  let finalTotal;
+  products.forEach((product) => {
+    const quantity = product.quantity ? product.quantity : 1;
+    const price = product.price;
+    const itemPrice = Currency(quantity).multiply(price);
+    total = Currency(total).add(itemPrice);
+  });
+  finalTotal = Number(total.value);
+  return finalTotal;
 };

@@ -1,15 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { calculateTotalPrice } from "@shared/helpers";
+import { Product } from "interface";
 import { CART } from "./constans";
 
 export const initialState: {
-  products: Array<{
-    id: string;
-    title: string;
-    price: number;
-    quantity?: number;
-  }>;
+  products: Array<Product> | [];
+  subTotal: number;
 } = {
   products: [],
+  subTotal: 0,
 };
 
 export const cartSlice = createSlice({
@@ -35,6 +34,27 @@ export const cartSlice = createSlice({
         // if the cart is empty
         state.products.push({ ...item, quantity: 1 });
       }
+    },
+    update: (state, action: { payload: { quantity: number; id: string } }) => {
+      const index = state.products.findIndex(
+        (product) => product.id === action.payload.id
+      );
+      if (action.payload.quantity < 1 && index > -1) {
+        // delete if quantity, 0
+        state.products = state.products.filter(
+          (product) => product.id !== action.payload.id
+        );
+      } else {
+        // update quanity
+        const product = state.products[index];
+        state.products[index] = {
+          ...product,
+          quantity: action.payload.quantity,
+        };
+      }
+    },
+    udpateSubTotal: (state) => {
+      state.subTotal = calculateTotalPrice(state.products);
     },
   },
 });
