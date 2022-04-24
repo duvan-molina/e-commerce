@@ -4,7 +4,7 @@ import { Product } from "interface";
 import { CART } from "./constans";
 
 export const initialState: {
-  products: Array<Product> | [];
+  products: Array<Product>;
   subTotal: number;
 } = {
   products: [],
@@ -21,7 +21,6 @@ export const cartSlice = createSlice({
         const products = state.products;
         const index = products.findIndex((product) => product.id === item.id);
         if (index !== -1) {
-          console.log(index);
           // if product already available in the cart
           const product = products[index];
           const quantity = product.quantity ? product.quantity : 0;
