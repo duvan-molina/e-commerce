@@ -5,6 +5,8 @@ export const productsList = [
     imagen: "https://picsum.photos/200/300",
     price: 2344,
     slug: "product-1",
+    description:
+      "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
   },
   {
@@ -13,6 +15,8 @@ export const productsList = [
     imagen: "https://picsum.photos/200/600",
     price: 2324,
     slug: "product-2",
+    description:
+      "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
   },
   {
@@ -21,6 +25,8 @@ export const productsList = [
     imagen: "https://picsum.photos/200/700",
     price: 2124,
     slug: "product-3",
+    description:
+      "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
   },
   {
@@ -29,6 +35,8 @@ export const productsList = [
     imagen: "https://picsum.photos/200/800",
     price: 2394,
     slug: "product-4",
+    description:
+      "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
   },
   {
@@ -37,6 +45,8 @@ export const productsList = [
     imagen: "https://picsum.photos/200/800",
     price: 2394,
     slug: "product-5",
+    description:
+      "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
   },
   {
@@ -45,6 +55,8 @@ export const productsList = [
     imagen: "https://picsum.photos/200/800",
     price: 2394,
     slug: "product-6",
+    description:
+      "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
   },
   {
@@ -53,6 +65,8 @@ export const productsList = [
     imagen: "https://picsum.photos/200/800",
     price: 2394,
     slug: "product-7",
+    description:
+      "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
   },
   {
@@ -61,6 +75,8 @@ export const productsList = [
     imagen: "https://picsum.photos/200/800",
     price: 2394,
     slug: "product-8",
+    description:
+      "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
   },
 ];

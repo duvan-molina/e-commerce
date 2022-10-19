@@ -1,3 +1,40 @@
 {
   "extends": "next/core-web-vitals"
+  // "plugins": ["simple-import-sort", "import", "react", "@typescript-eslint"],
+  // "rules": {
+  //   "simple-import-sort/imports": [
+  //     "error",
+  //     {
+  //       "groups": [
+  //         // Side effect imports.
+  //         ["^\\u0000"],
+  //         // Packages. `react` related packages come first.
+  //         // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
+  //         [
+  //           "^react$",
+  //           "^react-native$",
+  //           "^@shopify/restyle",
+  //           "^react",
+  //           "^@?\\w",
+  //           "^[^.]"
+  //         ],
+  //         // Absolute imports - ts-alias
+  //         [
+  //           "(^@(ui|assets|constants|dashboard|navigation|services|theme|utils|auth|loans|multi-loan|news|notifications|shared|payments|profile|refinance|support|qr-apply|fico)|^@cp)(/.*|$)([^\\u0000$])"
+  //         ],
+  //         // Relative imports.
+  //         ["^\\."],
+  //         // for types imports
+  //         [
+  //           "^[^/\\.].*\u0000$",
+  //           "^@types$",
+  //           "^@app-types$",
+  //           "/types$",
+  //           "^\\..*\u0000$"
+  //         ] // types (0 at end)
+  //       ]
+  //     }
+  //   ],
+  //   "simple-import-sort/exports": "error"
+  // }
 }

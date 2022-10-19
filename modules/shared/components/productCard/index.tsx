@@ -2,10 +2,8 @@ import { findProductIndex, getProductQuantity } from "@shared/helpers";
 import { useAppDispatch, useAppSelector } from "@shared/store/hooks";
 import { cartActions } from "@shared/store/modules/cart/cart.slice";
 import { productsSelector } from "@shared/store/modules/cart/selectors";
-import { Product } from "interface";
 import Link from "next/link";
 import NumberFormat from "react-number-format";
-import Button from "../button";
 
 type Props = {
   id: string;
@@ -33,7 +31,7 @@ const ProductCard: React.FC<Props> = ({ id, title, imagen, price, slug }) => {
   return (
     <div>
       <div className={`text-center group ease-in duration-300`}>
-        <Link href={`producto/${slug}`} passHref>
+        <Link href={`/producto/${slug}`} passHref>
           <div className="h-52 md:h-64 lg:h-80 rounded-md cursor-pointer overflow-hidden relative 	w-full hover:before:absolute hover:before:inset-0 hover:before:bg-dark hover:before:opacity-10">
             <img
               src={imagen}
