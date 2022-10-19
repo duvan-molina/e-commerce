@@ -8,6 +8,7 @@ export const productsList = [
     description:
       "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
+    isOffer: true,
   },
   {
     id: "3241",
@@ -18,6 +19,7 @@ export const productsList = [
     description:
       "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
+    isOffer: false,
   },
   {
     id: "234234456456",
@@ -28,6 +30,7 @@ export const productsList = [
     description:
       "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
+    isOffer: false,
   },
   {
     id: "134534",
@@ -38,6 +41,7 @@ export const productsList = [
     description:
       "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
+    isOffer: false,
   },
   {
     id: "456456",
@@ -48,6 +52,7 @@ export const productsList = [
     description:
       "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
+    isOffer: false,
   },
   {
     id: "4242342",
@@ -58,6 +63,7 @@ export const productsList = [
     description:
       "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
+    isOffer: false,
   },
   {
     id: "2342ss3423",
@@ -68,6 +74,7 @@ export const productsList = [
     description:
       "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
+    isOffer: true,
   },
   {
     id: "234234234",
@@ -78,5 +85,6 @@ export const productsList = [
     description:
       "lorem productsList packages/mobile/README.md https://reactnative.dev/docs/environment-setup",
     quantity: 1,
+    isOffer: false,
   },
 ];

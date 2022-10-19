@@ -44,9 +44,12 @@ const Header: React.FC<{}> = () => {
                   <a>Productos</a>
                 </Link>
               </li>
-              <li className="md:p-4 py-2">Ofertas</li>
+              <li className="md:p-4 py-2">
+                <Link href={`/productos?search=ofertas`} passHref>
+                  <a>Offertas</a>
+                </Link>
+              </li>
               <li className="md:p-4 py-2">Contacto</li>
-              <li className="md:p-4">Nosotros</li>
             </ul>
           </div>
         </nav>
